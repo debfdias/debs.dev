@@ -1,12 +1,14 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import Footer from "@/components/Footer"
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Débora Dias',
-  description: 'A software engineer with a passion for developing robust and efficient solutions.',
+  title: "Débora Dias",
+  description:
+    "A software engineer with a passion for developing robust and efficient solutions.",
 }
 
 export default function RootLayout({
@@ -15,8 +17,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html data-theme="dark" lang="en" className={inter.className}>
+      <body>
+        <div className="flex justify-center min-h-screen">
+          <main className="w-full max-w-screen-lg">{children}</main>
+        </div>
+        <Footer />
+      </body>
     </html>
   )
 }
