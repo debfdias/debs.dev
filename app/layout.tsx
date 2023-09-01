@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer"
+import Header from "@/components/Header"
+import ThemeProvider from "@/contexts/ThemeProvider"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -19,6 +21,9 @@ export default function RootLayout({
   return (
     <html data-theme="dark" lang="en" className={inter.className}>
       <body>
+        <ThemeProvider>
+          <Header />
+        </ThemeProvider>
         <div className="flex justify-center min-h-screen">
           <main className="w-full max-w-screen-lg">{children}</main>
         </div>

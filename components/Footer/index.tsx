@@ -1,13 +1,22 @@
-import { GitHub, LinkedIn, Mail } from "iconoir-react"
+import { MdEmail } from "react-icons/md"
+import { RxGithubLogo, RxLinkedinLogo } from "react-icons/rx"
 
 const socialNetworks = [
-  { icon: <GitHub />, href: "https://github.com/debfdias", title: "Github" },
   {
-    icon: <LinkedIn />,
+    icon: <RxGithubLogo size={28} />,
+    href: "https://github.com/debfdias",
+    title: "Github",
+  },
+  {
+    icon: <RxLinkedinLogo size={28} />,
     href: "https://linkedin.com/in/debfdias",
     title: "LinkedIn",
   },
-  { icon: <Mail />, href: `mailto:debfdias@gmail.com`, title: "Email" },
+  {
+    icon: <MdEmail size={28} />,
+    href: `mailto:debfdias@gmail.com`,
+    title: "Email",
+  },
 ]
 
 export default function Footer() {
