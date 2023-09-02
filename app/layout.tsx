@@ -2,10 +2,10 @@ import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import ThemeProvider from "@/contexts/ThemeProvider"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Signika } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const font = Signika({ subsets: ["latin"], weight: ["400"] })
 
 export const metadata: Metadata = {
   title: "Débora Dias",
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html data-theme="dark" lang="en" className={inter.className}>
+    <html data-theme="dark" lang="en" className={font.className}>
       <body>
         <ThemeProvider>
           <Header />

@@ -32,11 +32,10 @@ export function Navbar() {
         <div className="flex gap-4">
           {navItems.map((item) => {
             const isActive = item.path === pathname
-            const isHome = pathname === "/"
             return (
               <Link
                 key={item.path}
-                className={`px-4 pb-4 text-md font-semibold relative no-underline duration-300 ease-in hover:text-gray-200 ${
+                className={`px-4 pb-4 text-lg font-semibold relative no-underline duration-300 ease-in hover:text-gray-200 ${
                   isActive ? "text-gray-100" : "text-gray-300"
                 }`}
                 data-active={isActive}
