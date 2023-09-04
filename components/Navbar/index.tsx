@@ -70,7 +70,7 @@ export function Navbar() {
       <div className="flex items-center sm:hidden">
         <button
           aria-label="Open Menu"
-          className="rounded p-2 text-gray-600 hover:bg-neutral-100 hover:text-gray-900 hover:transition-colors hover:duration-300 dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white"
+          className="pb-4 text-gray-200 hover:text-pink-500 hover:transition-colors hover:duration-300 "
           onClick={() => setIsOpen(true)}
         >
           <RxHamburgerMenu size={24} aria-hidden="true" />
@@ -102,25 +102,31 @@ export function Navbar() {
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <Dialog.Panel className="fixed top-0 right-0 z-50 flex h-full w-full max-w-[280px] flex-col overflow-y-scroll bg-white p-6 text-gray-900 shadow-2xl dark:bg-gray-900 dark:text-gray-300">
+              <Dialog.Panel className="fixed top-0 right-0 z-50 flex h-full w-full max-w-[250px] flex-col overflow-y-scroll bg-blue-600 p-6 text-gray-200">
                 <button
-                  className="ml-auto"
-                  aria-label="Close Menu"
+                  className="ml-auto hover:text-pink-100"
+                  aria-label="Close menu"
                   onClick={() => setIsOpen(false)}
                 >
-                  <RxCross1 size={24} aria-hidden="true" />
+                  <RxCross1 size={24} aria-hidden="true"/>
                 </button>
 
                 <nav>
-                  <ul className="flex flex-col space-y-6 text-lg font-semibold">
+                  <ul className="flex flex-col space-y-6 text-xl font-semibold mt-4">
                     {navItems.map((route) => (
                       <li key={route.name}>
                         <Link
-                          className="p-2"
+                          className="ml-4 py-3 group"
                           href={route.path}
                           onClick={() => setIsOpen(false)}
                         >
-                          {route.name}
+                          <div className="left-0 w-[4px] hover:bg-pink-500 absolute rounded-sm">
+                            <div className="ml-[30px] hover:text-pink-500 ">
+                            {route.name}
+                            </div>
+                          
+                          </div>
+                          
                         </Link>
                       </li>
                     ))}
