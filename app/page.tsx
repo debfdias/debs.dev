@@ -47,16 +47,16 @@ export default function Home() {
       <div className="">
         <div className="pt-12 sm:pt-24 flex items-center font-thin pr-12 sm:pr-0">
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
-            Last projects
+            Lastest projects
           </h2>
-          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/30 via-pink-500 to-orange-500/30" />
+          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20" />
         </div>
 
         <div className="pt-12 sm:pt-24 flex items-center font-thin pr-12 sm:pr-0">
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
             Get in touch
           </h2>
-          <div className="ml-9 mr-8 h-[1px] w-full bg-gradient-to-r from-pink-500/30 via-pink-500 to-orange-500/30" />
+          <div className="ml-16 mr-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20" />
         </div>
       </div>
     </main>

@@ -108,25 +108,23 @@ export function Navbar() {
                   aria-label="Close menu"
                   onClick={() => setIsOpen(false)}
                 >
-                  <RxCross1 size={24} aria-hidden="true"/>
+                  <RxCross1 size={24} aria-hidden="true" />
                 </button>
 
                 <nav>
-                  <ul className="flex flex-col space-y-6 text-xl font-semibold mt-4">
+                  <ul className="text-3xl font-semibold mt-4">
                     {navItems.map((route) => (
-                      <li key={route.name}>
+                      <li key={route.name} className="mb-12">
                         <Link
                           className="ml-4 py-3 group"
                           href={route.path}
                           onClick={() => setIsOpen(false)}
                         >
                           <div className="left-0 w-[4px] hover:bg-pink-500 absolute rounded-sm">
-                            <div className="ml-[30px] hover:text-pink-500 ">
-                            {route.name}
+                            <div className="ml-[30px] hover:text-pink-500 py-3">
+                              {route.name}
                             </div>
-                          
                           </div>
-                          
                         </Link>
                       </li>
                     ))}
