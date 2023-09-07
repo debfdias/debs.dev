@@ -5,7 +5,7 @@ import type { Metadata } from "next"
 import { Signika } from "next/font/google"
 import "./globals.css"
 
-const font = Signika({ subsets: ["latin"], weight: ["400"] })
+const font = Signika({ subsets: ["latin"], weight: ["300", "400"] })
 
 export const metadata: Metadata = {
   title: "Débora Dias",
@@ -24,8 +24,10 @@ export default function RootLayout({
         <ThemeProvider>
           <Header />
         </ThemeProvider>
-        <div className="flex justify-center min-h-screen">
-          <main className="w-full max-w-screen-lg">{children}</main>
+        <div className="flex min-h-screen">
+          <main className="w-full max-w-screen-lg pt-24 sm:ml-44 ml-24 items-start">
+            {children}
+          </main>
         </div>
         <Footer />
       </body>
