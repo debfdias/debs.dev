@@ -120,7 +120,7 @@ export function Navbar() {
                           href={route.path}
                           onClick={() => setIsOpen(false)}
                         >
-                          <div className="left-0 w-[4px] hover:bg-pink-500 absolute rounded-sm">
+                          <div className="left-0 w-[4px] absolute ">
                             <div className="ml-[30px] hover:text-pink-500 py-3">
                               {route.name}
                             </div>
