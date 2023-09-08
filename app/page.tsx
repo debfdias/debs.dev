@@ -16,7 +16,7 @@ export default function Home() {
         <div className="text-gray-200 font-thin text-lg">
           <p>
             I am a software engineer based in Recife, Brazil. I have experience
-            in building scalable, secure and accesible applications using
+            in building scalable, secure and accessible applications using
             various frameworks and technologies. I am passionate about creating
             high-quality code that follows best practices and industry
             standards.
@@ -50,14 +50,14 @@ export default function Home() {
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
             Lastest projects
           </h2>
-          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20" />
+          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[270px]" />
         </div>
 
         <div className="pt-12 sm:pt-24 flex items-center font-thin pr-12 sm:pr-0 mb-12">
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
             Get in touch
           </h2>
-          <div className="ml-16 mr-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20" />
+          <div className="ml-16 mr-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[270px]" />
         </div>
         <div className="sm:flex pr-16 sm:pr-0 justify-between" id="getInTouch">
           <div className="font-thin text-gray-200 sm:w-1/2 text-lg mb-8">
@@ -71,7 +71,7 @@ export default function Home() {
             </a>{" "}
             regardless of the subject.
           </div>
-          <div className="sm:w-2/5">
+          <div className="sm:w-2/5 min-w-[300px]">
             <ContactForm />
           </div>
         </div>

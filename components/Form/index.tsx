@@ -12,9 +12,13 @@ const formSchema = z.object({
       required_error: "Fill this field.",
       invalid_type_error: "Name must be a string.",
     })
-    .min(6, { message: "Conta contrato possui 6 dígitos." }),
+    .min(6, { message: "Fill this field." }),
   email: z.string().email({ message: "Invalid e-mail." }),
-  message: z.string().min(10),
+  message: z
+    .string({
+      required_error: "Fill this field.",
+    })
+    .min(10, { message: "Fill this field." }),
 })
 
 type FormData = z.infer<typeof formSchema>
@@ -66,9 +70,12 @@ export default function ContactForm() {
           {...register("message")}
           name="message"
           id="message"
-          className="bg-blue-500 p-2 rounded-md text-gray-300 w-full mb-6 font-thin focus:outline-none focus:ring-1 focus:ring-pink-500 resize-none h-[120px]"
+          className="bg-blue-500 p-2 rounded-md text-gray-300 w-full mb-3 font-thin focus:outline-none focus:ring-1 focus:ring-pink-500 resize-none h-[120px]"
           placeholder="Your awesome message"
         ></textarea>
+        <p className="mb-8 text-xs text-red-500 font-thin">
+          {errors?.message?.message}
+        </p>
 
         <button
           type="submit"
