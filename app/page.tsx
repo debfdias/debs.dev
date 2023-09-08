@@ -1,9 +1,20 @@
+"use client"
 import ContactForm from "@/components/Form"
 import Link from "next/link"
 import { GiHand } from "react-icons/gi"
 import { GrDocumentPdf } from "react-icons/gr"
 
 export default function Home() {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault()
+    const href = e.currentTarget.href
+    const targetId = href.replace(/.*\#/, "")
+    const elem = document.getElementById(targetId)
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    })
+  }
+
   return (
     <main className="">
       <div className="sm:w-2/3 sm:mr-0 mr-24">
@@ -35,12 +46,14 @@ export default function Home() {
               </button>
             </Link>
 
-            <button className="bg-gray-100 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 text-blue-700 w-full sm:w-auto items-center justify-center">
-              <GiHand size={20} />
-              <div className="font-semibold whitespace-nowrap">
-                Let&apos;s talk!
-              </div>
-            </button>
+            <Link href="#getInTouch" onClick={handleScroll}>
+              <button className="bg-gray-100 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 text-blue-700 w-full sm:w-auto items-center justify-center">
+                <GiHand size={20} />
+                <div className="font-semibold whitespace-nowrap">
+                  Let&apos;s talk!
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -50,14 +63,14 @@ export default function Home() {
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
             Lastest projects
           </h2>
-          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[270px]" />
+          <div className="mx-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[220px]" />
         </div>
 
         <div className="pt-12 sm:pt-24 flex items-center font-thin pr-12 sm:pr-0 mb-12">
           <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
             Get in touch
           </h2>
-          <div className="ml-16 mr-8 h-[1px] w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[270px]" />
+          <div className="ml-16 mr-8 h-[1px] sm:w-full bg-gradient-to-r from-pink-500/20 via-pink-500/50 to-orange-500/20 min-w-[220px]" />
         </div>
         <div className="sm:flex pr-16 sm:pr-0 justify-between" id="getInTouch">
           <div className="font-thin text-gray-200 sm:w-1/2 text-lg mb-8">

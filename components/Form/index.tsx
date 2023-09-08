@@ -28,7 +28,7 @@ export default function ContactForm() {
     handleSubmit,
     register,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   })
@@ -73,6 +73,11 @@ export default function ContactForm() {
           className="bg-blue-500 p-2 rounded-md text-gray-300 w-full mb-3 font-thin focus:outline-none focus:ring-1 focus:ring-pink-500 resize-none h-[120px]"
           placeholder="Your awesome message"
         ></textarea>
+        {isSubmitSuccessful && (
+          <p className="mb-8 text-md text-green-500 font-thin">
+            Message sent! Thanks!
+          </p>
+        )}
         <p className="mb-8 text-xs text-red-500 font-thin">
           {errors?.message?.message}
         </p>
