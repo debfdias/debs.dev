@@ -25,7 +25,7 @@ export default function Footer() {
       <div>
         <div className="mb-4">
           <p className="font-medium text-lg mb-2 text-grey-200">Débora Dias</p>
-          <p className="text-gray-200">
+          <p className="text-gray-200 font-thin">
             A software engineer crafting amazing experiences.
           </p>
         </div>

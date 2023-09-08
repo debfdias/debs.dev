@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-1 pt-6 bg-blue-700/70 backdrop-blur-sm">
-        <div className="flex justify-between px-20 sm:px-40">
+        <div className="flex justify-between px-20 sm:px-44">
           <div className="flex items-center gap-4 sm:gap-2">
             <Navbar />
           </div>

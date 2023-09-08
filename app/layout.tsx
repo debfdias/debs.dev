@@ -25,7 +25,7 @@ export default function RootLayout({
           <Header />
         </ThemeProvider>
         <div className="flex min-h-screen">
-          <main className="w-full max-w-screen-lg pt-24 sm:ml-44 ml-24 items-start">
+          <main className="w-full pt-24 sm:px-44 sm:ml-0 ml-24 items-start">
             {children}
           </main>
         </div>
