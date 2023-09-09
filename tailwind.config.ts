@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         pink: {
+          300: "#ec635d",
           500: "#e95373",
           700: "#c93051",
         },

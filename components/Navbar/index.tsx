@@ -28,44 +28,50 @@ export function Navbar() {
 
   return (
     <div>
-      <nav className="hidden sm:block">
-        <div className="flex gap-4">
-          {navItems.map((item) => {
-            const isActive = item.path === pathname
-            return (
-              <Link
-                key={item.path}
-                className={`px-4 pb-4 text-lg font-semibold relative no-underline duration-300 ease-in hover:text-gray-200 ${
-                  isActive ? "text-gray-100" : "text-gray-300"
-                }`}
-                data-active={isActive}
-                href={item.path}
-                onMouseOver={() => setHoveredPath(item.path)}
-                onMouseLeave={() => setHoveredPath(pathname)}
-              >
-                <span>{item.name}</span>
-                {item.path === hoveredPath && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-500 via-pink-500 to-orange-500 rounded-md -z-10"
-                    layoutId="navbar"
-                    aria-hidden="true"
-                    style={{
-                      width: "100%",
-                    }}
-                    transition={{
-                      type: "spring",
-                      bounce: 0.25,
-                      stiffness: 100,
-                      damping: 12,
-                      duration: 0.1,
-                    }}
-                  />
-                )}
-              </Link>
-            )
-          })}
-        </div>
-      </nav>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        <nav className="hidden sm:block">
+          <div className="flex gap-4">
+            {navItems.map((item) => {
+              const isActive = item.path === pathname
+              return (
+                <Link
+                  key={item.path}
+                  className={`px-4 pb-4 text-lg font-semibold relative no-underline duration-300 ease-in hover:text-gray-200 ${
+                    isActive ? "text-gray-100" : "text-gray-300"
+                  }`}
+                  data-active={isActive}
+                  href={item.path}
+                  onMouseOver={() => setHoveredPath(item.path)}
+                  onMouseLeave={() => setHoveredPath(pathname)}
+                >
+                  <span>{item.name}</span>
+                  {(isActive || item.path === hoveredPath) && (
+                    <motion.div
+                      className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-500 via-pink-500 to-orange-500 rounded-md"
+                      layoutId="navbar"
+                      aria-hidden="true"
+                      style={{
+                        width: "100%",
+                      }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.25,
+                        stiffness: 100,
+                        damping: 12,
+                        duration: 0.1,
+                      }}
+                    />
+                  )}
+                </Link>
+              )
+            })}
+          </div>
+        </nav>
+      </motion.div>
 
       <div className="flex items-center sm:hidden">
         <button

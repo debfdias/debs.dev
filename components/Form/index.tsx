@@ -39,7 +39,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="sm:px-12 sm:pr-6 pb-12 pr-4">
+    <div className="sm:px-12 sm:pr-6 pb-12">
       <form action="" method="POST" onSubmit={handleSubmit(handleSendMessage)}>
         <label className="font-thin text-sm text-gray-300 mb-2 flex">
           Name
