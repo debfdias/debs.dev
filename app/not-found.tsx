@@ -19,7 +19,7 @@ export default function NotFound() {
         >
           <LiaMapSignsSolid size={64} />
         </motion.button>
-        <AnimatedByWord text="Nothig found here. Are you lost?" style="mb-1" />
+        <AnimatedByWord text="Nothing found here. Are you lost?" style="mb-1" />
       </div>
     </div>
   )
