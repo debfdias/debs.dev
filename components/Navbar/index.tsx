@@ -49,7 +49,25 @@ export function Navbar() {
                   onMouseLeave={() => setHoveredPath(pathname)}
                 >
                   <span>{item.name}</span>
-                  {(isActive || item.path === hoveredPath) && (
+                  {item.path === pathname && (
+                    <motion.div
+                      className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-500 via-pink-500 to-orange-500 rounded-md"
+                      layoutId="navbar"
+                      aria-hidden="true"
+                      style={{
+                        width: "100%",
+                      }}
+                      transition={{
+                        type: "spring",
+                        bounce: 0.25,
+                        stiffness: 100,
+                        damping: 12,
+                        duration: 0.1,
+                      }}
+                    />
+                  )}
+
+                  {item.path === hoveredPath && (
                     <motion.div
                       className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-pink-500 via-pink-500 to-orange-500 rounded-md"
                       layoutId="navbar"
