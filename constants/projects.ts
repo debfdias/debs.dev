@@ -6,23 +6,23 @@ interface IProject {
   imageAlt: string
 }
 
-import defaultImage from "../assets/default.png"
-import igNews from "../assets/ignews.png"
+import barbershop from "../assets/barbershop.png"
+import blooddonate from "../assets/blooddonate.png"
+import coffeedelivery from "../assets/coffeedelivery.png"
+import esport from "../assets/esport.png"
+import habits from "../assets/habits.png"
+import igNews from "../assets/ignews_.png"
+import perguntaai from "../assets/perguntaai.png"
+import plantcare from "../assets/plantcare.png"
+import valeluz from "../assets/valeluz_.png"
 
 export const projects: IProject[] = [
   {
     name: "Vale Luz",
     description: "",
-    image: defaultImage.src,
+    image: valeluz.src,
     imageAlt: "",
     link: "/projects/valeluz",
-  },
-  {
-    name: "Coffee Delivery",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/coffeedelivery",
   },
   {
     name: "ig News",
@@ -32,59 +32,52 @@ export const projects: IProject[] = [
     link: "/projects/ignews",
   },
   {
-    name: "Habits Track",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/habitstrack",
-  },
-  {
     name: "e-sports duo",
     description: "",
-    image: defaultImage.src,
+    image: esport.src,
     imageAlt: "",
     link: "/projects/sportsduo",
   },
   {
-    name: "Blood Donation",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/blooddonation",
-  },
-  {
-    name: "Plant Care",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/plantcare",
-  },
-  {
-    name: "Delivery Now",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/deliverynow",
-  },
-  {
-    name: "World Cup Bet",
-    description: "",
-    image: defaultImage.src,
-    imageAlt: "",
-    link: "/projects/cupbet",
-  },
-  {
     name: "Pergunta Ai",
     description: "",
-    image: defaultImage.src,
+    image: perguntaai.src,
     imageAlt: "",
     link: "/projects/perguntaai",
   },
   {
-    name: "Go Barber",
+    name: "Plant Care",
     description: "",
-    image: defaultImage.src,
+    image: plantcare.src,
     imageAlt: "",
-    link: "/projects/gobarber",
+    link: "/projects/plantcare",
+  },
+  {
+    name: "Coffee Delivery",
+    description: "",
+    image: coffeedelivery.src,
+    imageAlt: "",
+    link: "/projects/coffeedelivery",
+  },
+  {
+    name: "Blood Donation",
+    description: "",
+    image: blooddonate.src,
+    imageAlt: "",
+    link: "/projects/blooddonation",
+  },
+  {
+    name: "Habits Track",
+    description: "",
+    image: habits.src,
+    imageAlt: "",
+    link: "/projects/habitstrack",
+  },
+  {
+    name: "Barber Time",
+    description: "",
+    image: barbershop.src,
+    imageAlt: "",
+    link: "/projects/barbershop",
   },
 ]

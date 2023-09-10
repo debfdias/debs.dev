@@ -16,33 +16,42 @@ export default function Hero() {
   }
 
   return (
-    <div className="sm:w-2/3 sm:mr-0 mr-12">
+    <div className="sm:w-2/3 sm:mr-0 mr-12 sm:py-12">
       <div className="flex mb-3">
         <AnimatedByWord
           text="Hey there, I am"
-          style="text-gray-100 sm:text-5xl sm:mr-2 mb-8 text-4xl font-semibold"
+          style="text-gray-100 sm:text-6xl sm:mr-2 mb-8 text-4xl font-semibold"
         />
         <AnimatedByWord
           delay={0.85}
           text="Debs!"
-          style="sm:text-5xl text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-l from-pink-500 to-pink-300 mb-8 whitespace-nowrap"
+          style="sm:text-6xl text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-l from-pink-500 to-pink-300 mb-8"
         />
       </div>
 
       <div className="text-gray-200 font-thin text-xl">
         <motion.div
-          whileInView="onscreen"
+          whileInView="visible"
+          exit="hidden"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p>
-            I am a software engineer based in Recife, Brazil. I have experience
-            in building scalable, secure and accessible applications using
-            various frameworks and technologies. I am passionate about creating
-            high-quality code that follows best practices and industry
-            standards.
-          </p>
+          <div className="sm:max-w-[750px] sm:min-w-[500px] sm:py-8">
+            <p>
+              I am a software engineer based in Recife, Brazil. I have
+              experience in building scalable, secure and accessible
+              applications using various frameworks and technologies. I am
+              passionate about creating high-quality code that follows best
+              practices and industry standards.
+            </p>
+            <p>
+              With more than 7 years of professional experience, I am committed
+              to delivering not just code but real world solutions that meet the
+              unique needs of clients and users. Let&apos;s connect and explore
+              how I can contribute to your next project!
+            </p>
+          </div>
         </motion.div>
         <div className="py-12 sm:flex sm:gap-8">
           <motion.div
@@ -60,8 +69,9 @@ export default function Hero() {
             }}
           >
             <Link
+              target="_blank"
               href={
-                "https://drive.google.com/uc?id=1jacl2prStuJP1RukfGo6lG0tuMYNK0wf&export=download"
+                "https://drive.google.com/file/d/168d6kiyzbqv6jg8any0J6V7A3HWydGNV/view?usp=sharing"
               }
             >
               <button className="bg-gradient-to-l from-pink-500 to-pink-700 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 mb-4 sm:mb-0 w-full sm:w-auto items-center justify-center">

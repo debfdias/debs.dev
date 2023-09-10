@@ -47,6 +47,7 @@ export default function ProjectsSlider() {
         }}
         initial="hidden"
         whileInView="visible"
+        exit="hidden"
         className="grid flex-1 grid-cols-1 gap-y-12 md:gap-x-8 md:gap-y-16 lg:gap-x-16"
       >
         <div className="flex items-center">
@@ -54,7 +55,7 @@ export default function ProjectsSlider() {
             onClick={(e: any) =>
               e.stopPropagation() || instanceRef.current?.prev()
             }
-            className="text-gray-300 hover:text-pink-500 hover:-translate-x-1 transition ease-in-out delay-150 mr-4 mb-16"
+            className=" text-gray-300 hover:text-pink-500 hover:-translate-x-1 transition ease-in-out delay-150 mr-4 mb-16"
           >
             <MdOutlineArrowBackIosNew size={30} />
           </button>
@@ -62,7 +63,10 @@ export default function ProjectsSlider() {
           <div ref={sliderRef} className="keen-slider pb-8">
             {projects.map((project) => {
               return (
-                <div className="keen-slider__slide p-2" key={project.name}>
+                <div
+                  className="keen-slider__slide sm:p-3 p-2"
+                  key={project.name}
+                >
                   <Link
                     href={project.link}
                     className="col-span-12 flex flex-col md:col-span-6 xl:col-span-4"
@@ -89,7 +93,7 @@ export default function ProjectsSlider() {
                           transition: { duration: 0.5, ease: "backInOut" },
                         }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-blue-500 z-0"
+                        className="bg-blue-500 z-0 border-2 border-solid border-blue-500 hover:border-pink-500 cursor-pointer rounded-sm"
                       >
                         <motion.img
                           variants={{
