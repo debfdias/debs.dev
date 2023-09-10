@@ -7,8 +7,8 @@ export default function NotFound() {
   return (
     <div className="">
       <div className="text-2xl sm:text-4xl flex gap-8 items-end">
-        <motion.button
-          animate={{ opacity: 1, rotate: [0, 0, 25, -25, 0] }}
+        <motion.div
+          animate={{ opacity: 1, rotate: [0, -20, 20, -20, 20, 0] }}
           transition={{
             duration: 5,
             ease: "backInOut",
@@ -18,7 +18,7 @@ export default function NotFound() {
           }}
         >
           <LiaMapSignsSolid size={64} />
-        </motion.button>
+        </motion.div>
         <AnimatedByWord text="Nothing found here. Are you lost?" style="mb-1" />
       </div>
     </div>

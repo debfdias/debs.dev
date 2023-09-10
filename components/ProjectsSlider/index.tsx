@@ -17,7 +17,7 @@ export default function ProjectsSlider() {
     mode: "free",
     slides: {
       perView: size.width < 1000 ? 2 : 3,
-      spacing: size.width < 1000 ? 20 : 50,
+      spacing: size.width < 1000 ? 10 : 30,
     },
   })
 
@@ -54,15 +54,15 @@ export default function ProjectsSlider() {
             onClick={(e: any) =>
               e.stopPropagation() || instanceRef.current?.prev()
             }
-            className="text-gray-300 hover:text-pink-500 hover:-translate-x-1 transition ease-in-out delay-150 mr-4 mb-5"
+            className="text-gray-300 hover:text-pink-500 hover:-translate-x-1 transition ease-in-out delay-150 mr-4 mb-16"
           >
             <MdOutlineArrowBackIosNew size={30} />
           </button>
 
-          <div ref={sliderRef} className="keen-slider">
+          <div ref={sliderRef} className="keen-slider pb-8">
             {projects.map((project) => {
               return (
-                <div className="keen-slider__slide" key={project.name}>
+                <div className="keen-slider__slide p-2" key={project.name}>
                   <Link
                     href={project.link}
                     className="col-span-12 flex flex-col md:col-span-6 xl:col-span-4"
@@ -84,6 +84,7 @@ export default function ProjectsSlider() {
                           },
                         }}
                         whileHover={{
+                          translateY: -5,
                           scale: 1.05,
                           transition: { duration: 0.5, ease: "backInOut" },
                         }}
@@ -121,7 +122,7 @@ export default function ProjectsSlider() {
             onClick={(e: any) =>
               e.stopPropagation() || instanceRef.current?.next()
             }
-            className="text-gray-300 hover:text-pink-500 hover:translate-x-1 transition ease-in-out delay-150 ml-4 mb-5"
+            className="text-gray-300 hover:text-pink-500 hover:translate-x-1 transition ease-in-out delay-150 ml-4 mb-16"
           >
             <MdOutlineArrowForwardIos size={30} />
           </button>
