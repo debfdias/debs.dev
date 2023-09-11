@@ -31,7 +31,7 @@ export default function GetInTouch() {
 
       <div className="sm:flex pr-16 sm:pr-0 justify-between" id="getInTouch">
         <motion.div variants={textEnterLeftVariants}>
-          <div className="font-thin text-gray-200 sm:w-1/2 text-lg mb-8 sm:min-w-[200px]">
+          <div className="font-thin text-gray-200 text-lg mb-8 sm:min-w-[200px]">
             Do not hesitate to contact me through the following form or by email
             on{" "}
             <a
@@ -43,7 +43,7 @@ export default function GetInTouch() {
             regardless of the subject.
           </div>
         </motion.div>
-        <div className="sm:w-1/2 sm:min-w-[350px]">
+        <div className="sm:w-2/3 sm:min-w-[350px]">
           <ContactForm />
         </div>
       </div>
