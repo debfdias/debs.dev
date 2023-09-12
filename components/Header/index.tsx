@@ -23,7 +23,7 @@ export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   return (
     <header className="sticky top-0 z-50 pt-6 bg-blue-700/70 backdrop-blur-sm">
-      <div className="flex justify-between px-12 sm:px-44">
+      <div className="flex justify-between px-12 md:px-44">
         <div className="flex items-center gap-4 sm:gap-2">
           <Navbar />
         </div>

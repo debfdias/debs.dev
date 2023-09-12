@@ -20,12 +20,12 @@ export default function Hero() {
       <div className="flex mb-3">
         <AnimatedByWord
           text="Hey there, I am"
-          style="text-gray-100 sm:text-6xl sm:mr-2 mb-8 text-4xl font-semibold"
+          style="text-gray-100 md:text-6xl sm:mr-2 mb-8 text-5xl font-semibold"
         />
         <AnimatedByWord
           delay={0.85}
           text="Debs!"
-          style="sm:text-6xl text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-l from-pink-500 to-pink-300 mb-8"
+          style="md:text-6xl text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-l from-pink-500 to-pink-300 mb-8"
         />
       </div>
 

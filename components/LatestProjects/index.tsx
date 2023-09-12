@@ -32,7 +32,7 @@ export default function LatestProjects() {
           </div>
         </div>
         <motion.div variants={textEnterLeftVariants}>
-          <div className="text-gray-200 font-thin sm:text-xl text-lg mt-16 sm:w-2/3">
+          <div className="text-gray-200 font-thin sm:text-xl text-lg mt-16 md:w-full xl:w-2/3">
             These are some of my recent projects I&apos;ve worked on. Feel free
             to explore the{" "}
             <Link

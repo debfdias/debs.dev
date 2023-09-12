@@ -123,25 +123,32 @@ export function Navbar() {
               >
                 <RxCross1 size={24} aria-hidden="true" />
               </button>
-              {navItems.map((route) => (
-                <div
-                  key={route.name}
-                  className="pl-12 mb-8 text-3xl font-semibold text-gray-200 flex flex-col"
-                >
-                  <MotionLink
-                    className="group"
-                    href={route.path}
-                    onClick={() => setIsOpen(false)}
-                    variants={mobileLinkVariants}
+              {navItems.map((route) => {
+                const isActive = route.path === pathname
+                return (
+                  <div
+                    key={route.name}
+                    className="pl-12 mb-8 text-3xl font-semibold text-gray-200 flex flex-col"
                   >
-                    <div className="">
-                      <div className="hover:text-pink-500 py-3">
-                        {route.name}
+                    <MotionLink
+                      className="group"
+                      href={route.path}
+                      onClick={() => setIsOpen(false)}
+                      variants={mobileLinkVariants}
+                    >
+                      <div className="">
+                        <div
+                          className={`hover:text-pink-500 py-3 ${
+                            isActive ? "text-pink-500" : "text-gray-300"
+                          }`}
+                        >
+                          {route.name}
+                        </div>
                       </div>
-                    </div>
-                  </MotionLink>
-                </div>
-              ))}
+                    </MotionLink>
+                  </div>
+                )
+              })}
             </motion.nav>
           </div>
         )}
