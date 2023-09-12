@@ -16,8 +16,8 @@ export default function ProjectsSlider() {
     loop: true,
     mode: "free",
     slides: {
-      perView: size.width < 1000 ? 2 : 3,
-      spacing: size.width < 1000 ? 10 : 30,
+      perView: size.width < 1200 ? 2 : 3,
+      spacing: size.width < 1200 ? 10 : 30,
     },
   })
 
@@ -60,7 +60,7 @@ export default function ProjectsSlider() {
             <MdOutlineArrowBackIosNew size={30} />
           </button>
 
-          <div ref={sliderRef} className="keen-slider pb-8">
+          <div ref={sliderRef} className="keen-slider pb-8 md:min-w-[400px]">
             {projects.map((project) => {
               return (
                 <div

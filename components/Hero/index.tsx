@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="flex mb-3">
         <AnimatedByWord
           text="Hey there, I am"
-          style="text-gray-100 md:text-6xl sm:mr-2 mb-8 text-5xl font-semibold"
+          style="text-gray-100 md:text-6xl mb-8 text-5xl font-semibold mr-2"
         />
         <AnimatedByWord
           delay={0.85}
@@ -45,7 +45,7 @@ export default function Hero() {
               passionate about creating high-quality code that follows best
               practices and industry standards.
             </p>
-            <p>
+            <p className="mt-4">
               With more than 7 years of professional experience, I am committed
               to delivering not just code but real world solutions that meet the
               unique needs of clients and users. Let&apos;s connect and explore
