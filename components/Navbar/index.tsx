@@ -1,8 +1,8 @@
-import { Dialog, Transition } from "@headlessui/react"
-import { motion } from "framer-motion"
+import { mobileLinkVariants, mobileNavVariants } from "@/constants/variants"
+import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Fragment, useState } from "react"
+import { useRef, useState } from "react"
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
 
 const navItems = [
@@ -20,9 +20,17 @@ const navItems = [
   },
 ]
 
+const MotionLink = motion(Link)
+
 export function Navbar() {
+  const navRef = useRef<HTMLElement>(null)
+
   const [isOpen, setIsOpen] = useState(false)
   let pathname = usePathname()
+
+  if (pathname.includes("/projects/")) {
+    pathname = "/projects"
+  }
 
   const [hoveredPath, setHoveredPath] = useState(pathname)
 
@@ -90,75 +98,54 @@ export function Navbar() {
           </div>
         </nav>
       </motion.div>
-
-      <div className="flex items-center sm:hidden">
+      <div className="sm:hidden">
         <button
-          aria-label="Open Menu"
-          className="pb-4 text-gray-200 hover:text-pink-500 hover:transition-colors hover:duration-300 "
-          onClick={() => setIsOpen(true)}
+          className="pb-4 text-gray-200 hover:text-pink-500 hover:transition-colors hover:duration-300 md:hidden"
+          onClick={() => setIsOpen(!isOpen)}
         >
           <RxHamburgerMenu size={24} aria-hidden="true" />
         </button>
-
-        <Transition show={isOpen} as={Fragment}>
-          <Dialog onClose={() => setIsOpen(false)}>
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <div
-                className="fixed inset-0 z-30 bg-black/20 backdrop-blur-sm"
-                aria-hidden="true"
-              />
-            </Transition.Child>
-
-            <Transition.Child
-              as={Fragment}
-              enter="transition ease-in-out duration-300 transform"
-              enterFrom="translate-x-full"
-              enterTo="translate-x-0"
-              leave="transition ease-in-out duration-300 transform"
-              leaveFrom="translate-x-0"
-              leaveTo="translate-x-full"
-            >
-              <Dialog.Panel className="fixed top-0 right-0 z-50 flex h-full w-full max-w-[250px] flex-col overflow-y-scroll bg-blue-600 p-6 text-gray-200">
-                <button
-                  className="ml-auto hover:text-pink-100"
-                  aria-label="Close menu"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <RxCross1 size={24} aria-hidden="true" />
-                </button>
-
-                <nav>
-                  <ul className="text-3xl font-semibold mt-4">
-                    {navItems.map((route) => (
-                      <li key={route.name} className="mb-12">
-                        <Link
-                          className="ml-4 py-3 group"
-                          href={route.path}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <div className="left-0 w-[4px] absolute ">
-                            <div className="ml-[30px] hover:text-pink-500 py-3">
-                              {route.name}
-                            </div>
-                          </div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </Dialog.Panel>
-            </Transition.Child>
-          </Dialog>
-        </Transition>
       </div>
+      <AnimatePresence>
+        {isOpen && (
+          <div className="fixed inset-0 bg-black/50 h-screen backdrop-blur-sm">
+            <motion.nav
+              ref={navRef}
+              variants={mobileNavVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="fixed top-0 bg-blue-500 w-[300px] h-screen"
+            >
+              <button
+                className="pt-5 pl-12 pb-16 text-gray-200 hover:text-pink-500 hover:transition-colors hover:duration-300 md:hidden"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                <RxCross1 size={24} aria-hidden="true" />
+              </button>
+              {navItems.map((route) => (
+                <div
+                  key={route.name}
+                  className="pl-12 mb-8 text-3xl font-semibold text-gray-200 flex flex-col"
+                >
+                  <MotionLink
+                    className="group"
+                    href={route.path}
+                    onClick={() => setIsOpen(false)}
+                    variants={mobileLinkVariants}
+                  >
+                    <div className="">
+                      <div className="hover:text-pink-500 py-3">
+                        {route.name}
+                      </div>
+                    </div>
+                  </MotionLink>
+                </div>
+              ))}
+            </motion.nav>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

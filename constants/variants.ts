@@ -38,3 +38,38 @@ export const dropUpVariants: Variants = {
     },
   },
 }
+
+export const mobileNavVariants: Variants = {
+  hidden: {
+    x: "-100%",
+    transition: {
+      duration: 0.5,
+      ease: [0.8, 0.1, 0.3, 0.8],
+      when: "afterChildren",
+    },
+  },
+  visible: {
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.8, 0.1, 0.3, 0.8],
+      when: "beforeChildren",
+      staggerChildren: 0.25,
+    },
+  },
+}
+
+export const mobileLinkVariants = {
+  hidden: {
+    opacity: 0,
+    x: -50,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.3,
+      ease: "circOut",
+    },
+  },
+}
