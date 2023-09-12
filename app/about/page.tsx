@@ -32,8 +32,8 @@ export default function About() {
         >
           <div className="lg:w-1/2 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
             <p>
-              My name is Débora Dias and I'm from Brazil. I&apos;ve graduated in
-              Computer Engineering from{" "}
+              My name is Débora Dias and I&apos;m from Brazil. I&apos;ve
+              graduated in Computer Engineering from{" "}
               <Link
                 target="_blank"
                 className="hover:text-gray-100 font-semibold"
