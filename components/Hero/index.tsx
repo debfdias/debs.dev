@@ -60,6 +60,7 @@ export default function Hero() {
             transition={{
               duration: 0.3,
               ease: [0, 0.71, 0.2, 1.01],
+              delay: 0.75,
               scale: {
                 type: "spring",
                 damping: 5,
@@ -87,7 +88,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              delay: 0.75,
+              delay: 1.25,
               duration: 0.6,
               ease: [0, 0.71, 0.2, 1.01],
               scale: {

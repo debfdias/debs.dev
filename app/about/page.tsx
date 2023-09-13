@@ -1,5 +1,6 @@
 "use client"
 import AnimatedByWord from "@/components/AnimatedByWord"
+import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { BiLogoNodejs, BiLogoReact } from "react-icons/bi"
@@ -69,45 +70,88 @@ export default function About() {
               the sunset. I play acoustic guitar too, and though I&apos;m not a
               good singer, I do try my best.
             </p>
-            <div className="sm:flex pt-8 items-center">
-              <div className="font-semibold mr-4 whitespace-nowrap sm:pb-0 pb-4">
+          </div>
+        </motion.div>
+        <motion.section
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.5, delayChildren: 1 },
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          exit="hidden"
+        >
+          <div className="sm:flex pt-8 items-center text-gray-200">
+            <motion.div variants={textEnterLeftVariants}>
+              <div className="font-semibold mr-4 whitespace-nowrap sm:pb-0 pb-4 text-lg">
                 Things I code with:
               </div>
-              <div className="flex gap-3 cursor-pointer">
+            </motion.div>
+
+            <div className="flex gap-3 cursor-pointer">
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-blue-400">
                   <SiTypescript size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-yellow-400">
                   <SiJavascript size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-gray-100">
                   <SiNextdotjs size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-blue-400">
                   <BiLogoReact size={27} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-green-500">
                   <BiLogoNodejs size={27} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-pink-400">
                   <SiGraphql size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-blue-300">
                   <SiPostgresql size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-red-500">
                   <SiNestjs size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-blue-400">
                   <SiTailwindcss size={24} />
                 </div>
+              </motion.div>
+
+              <motion.div variants={stackVariants}>
                 <div className="hover:text-blue-400">
                   <SiDocker size={24} />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
-        </motion.div>
+        </motion.section>
       </div>
     </div>
   )

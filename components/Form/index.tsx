@@ -1,6 +1,10 @@
 "use client"
 
-import { containerVariants, dropUpVariants } from "@/constants/variants"
+import {
+  arrowAnimation,
+  containerVariants,
+  dropUpVariants,
+} from "@/constants/variants"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { motion } from "framer-motion"
 import { useForm } from "react-hook-form"
@@ -30,7 +34,7 @@ export default function ContactForm() {
     handleSubmit,
     register,
     reset,
-    formState: { errors, isSubmitSuccessful },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   })
@@ -101,15 +105,21 @@ export default function ContactForm() {
             {errors?.message?.message}
           </p>
 
-          <button
+          <motion.button
+            initial="initial"
+            animate="initial"
+            whileHover="animate"
             type="submit"
-            className="flex text-gray-200 items-center gap-2 hover:text-pink-500 hover:scale-[1.05] hover:translate-x-1 transition ease-in-out delay-150"
           >
-            <LuSend size={24} />
-            <div className="font-semibold whitespace-nowrap text-lg">
-              Send it
+            <div className="flex text-gray-200 items-center gap-2 hover:text-pink-500 hover:scale-[1.15] hover:translate-x-1 transition ease-in-out delay-150">
+              <motion.div variants={arrowAnimation}>
+                <LuSend size={24} />
+              </motion.div>
+              <div className="font-semibold whitespace-nowrap text-lg">
+                {isSubmitting ? <>Sending...</> : <>Send it</>}
+              </div>
             </div>
-          </button>
+          </motion.button>
         </form>
       </div>
     </motion.div>

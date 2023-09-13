@@ -73,3 +73,24 @@ export const mobileLinkVariants = {
     },
   },
 }
+
+export const stackVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: -10,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      mass: 2,
+      bounce: 2,
+    },
+  },
+}
+
+export const arrowAnimation: Variants = {
+  initial: { rotate: 0, scale: 1 },
+  animate: { rotate: [0, -10, 10, -10, 10, 0], scale: 1.15 },
+}
