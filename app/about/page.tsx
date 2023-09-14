@@ -85,6 +85,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           exit="hidden"
+          viewport={{ once: true, amount: 0.8 }}
         >
           <div className="sm:flex pt-8 items-center text-gray-200">
             <motion.div variants={textEnterLeftVariants}>
