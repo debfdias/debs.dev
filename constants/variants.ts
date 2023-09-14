@@ -94,3 +94,19 @@ export const arrowAnimation: Variants = {
   initial: { rotate: 0, scale: 1 },
   animate: { rotate: [0, -10, 10, -10, 10, 0], scale: 1.15 },
 }
+
+export const cardVariants: Variants = {
+  offscreen: {
+    y: 520,
+  },
+  onscreen: {
+    y: 230,
+    rotate: -10,
+    transition: {
+      delay: 0.75,
+      type: "spring",
+      bounce: 0.3,
+      duration: 1,
+    },
+  },
+}

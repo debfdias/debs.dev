@@ -1,5 +1,6 @@
 "use client"
 import AnimatedByWord from "@/components/AnimatedByWord"
+import MeCard from "@/components/MeCard"
 import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -30,8 +31,9 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
+          className="xl:flex items-center grid"
         >
-          <div className="lg:w-1/2 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
+          <div className="md:pr-12 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
             <p>
               My name is Débora Dias and I&apos;m from Brazil. I&apos;ve
               graduated in Computer Engineering from{" "}
@@ -66,16 +68,18 @@ export default function About() {
             </p>
             <p className="mt-4">
               In my free time I love playing with my pets - I have two adorable
-              dogs and a grumpy cat. I also enjoy going to the beach and watch
+              dogs and a lovely cat. I also enjoy going to the beach and watch
               the sunset. I play acoustic guitar too, and though I&apos;m not a
               good singer, I do try my best.
             </p>
           </div>
+          <MeCard />
         </motion.div>
+
         <motion.section
           variants={{
             visible: {
-              transition: { staggerChildren: 0.5, delayChildren: 1 },
+              transition: { staggerChildren: 0.25, delayChildren: 0.5 },
             },
           }}
           initial="hidden"
