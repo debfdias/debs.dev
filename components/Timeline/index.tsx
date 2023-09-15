@@ -33,7 +33,7 @@ export default function Timeline() {
         initial="hidden"
         whileInView="visible"
         exit="hidden"
-        className="lg:w-2/3 ml-2"
+        className="lg:w-2/3 ml-2 mb-16"
       >
         <ol>
           <motion.div variants={stackVariants}>
@@ -52,7 +52,7 @@ export default function Timeline() {
                   March, 2022
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  I participated in several projects for cdivents like HP and
+                  I participated in several projects for clients like HP and
                   Disney while working at ArcTouch. I architected and
                   implemented efficient solutions using Javascript and Ruby, and
                   also mentored junior engineers, conducting code reviews, and
