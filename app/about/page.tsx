@@ -1,6 +1,7 @@
 "use client"
 import AnimatedByWord from "@/components/AnimatedByWord"
 import MeCard from "@/components/MeCard"
+import Timeline from "@/components/Timeline"
 import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -76,6 +77,7 @@ export default function About() {
           <MeCard />
         </motion.div>
 
+        {/*====== Tech stack ====== */}
         <motion.section
           variants={{
             visible: {
@@ -157,6 +159,8 @@ export default function About() {
             </div>
           </div>
         </motion.section>
+
+        <Timeline />
       </div>
     </div>
   )
