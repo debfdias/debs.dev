@@ -11,7 +11,7 @@ export default function MeCard() {
         className="md:px-48 relative overflow-hidden"
         initial="offscreen"
         whileInView="onscreen"
-        viewport={{ once: true, amount: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
       >
         <div className="">
           <motion.div

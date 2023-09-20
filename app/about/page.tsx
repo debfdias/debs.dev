@@ -28,7 +28,7 @@ export default function About() {
           whileInView="visible"
           exit="hidden"
           className="xl:flex items-center grid"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <div className="md:pr-12 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
             <motion.div variants={textEnterLeftVariants}>
