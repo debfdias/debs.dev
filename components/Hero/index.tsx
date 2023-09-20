@@ -42,6 +42,7 @@ export default function Hero() {
           whileInView="visible"
           exit="hidden"
           className="sm:py-8"
+          viewport={{ once: true, amount: 0.8 }}
         >
           <motion.div
             className="sm:max-w-[750px] sm:min-w-[500px]"
