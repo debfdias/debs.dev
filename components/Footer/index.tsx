@@ -33,7 +33,7 @@ export default function Footer() {
           {socialNetworks.map((link) => (
             <a
               key={link.href}
-              className="hover:text-pink-500 hover:rotate-[4deg] hover:transition-all"
+              className="hover:text-pink-500"
               target="_blank"
               href={link.href}
               aria-label={link.title}

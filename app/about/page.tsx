@@ -2,6 +2,7 @@
 import AnimatedByWord from "@/components/AnimatedByWord"
 import MeCard from "@/components/MeCard"
 import Timeline from "@/components/Timeline"
+import { about } from "@/constants/texts"
 import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -26,56 +27,58 @@ export default function About() {
           style="text-gray-200 md:text-5xl mb-8 text-4xl font-semibold mr-2"
         />
 
-        <motion.div
+        {/*====== Description ====== */}
+        <motion.section
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.25, delayChildren: 0.5 },
+            },
+          }}
+          initial="hidden"
           whileInView="visible"
           exit="hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
           className="xl:flex items-center grid"
+          viewport={{ once: true, amount: 0.8 }}
         >
           <div className="md:pr-12 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
-            <p>
-              My name is Débora Dias and I&apos;m from Brazil. I&apos;ve
-              graduated in Computer Engineering from{" "}
-              <Link
-                target="_blank"
-                className="hover:text-gray-100 font-semibold"
-                href={"https://www.ufpe.br/"}
-              >
-                Federal University of Pernambuco
-              </Link>{" "}
-              in 2019.
-            </p>
-            <p className="mt-4">
-              I started my journey as a backend developer, but over the years
-              I&apos;ve learned how to love the frontend as well (thanks
-              Tailwind!). Today I&apos;m studying for my Master&apos;s Degree
-              and working at{" "}
-              <Link
-                target="_blank"
-                className="hover:text-gray-100 font-semibold"
-                href={"https://arctouch.com/"}
-              >
-                ArcTouch
-              </Link>{" "}
-              as a software engineer.
-            </p>
-            <p className="mt-4">
-              After almost 8 years, I&apos;ve worked with many languages and
-              frameworks. My main and favorite stack today is basically anything
-              related to Typescript. But I keep my mind open to learn new things
-              as technology is always mutating really fast.
-            </p>
-            <p className="mt-4">
-              In my free time I love playing with my pets - I have two adorable
-              dogs and a lovely cat. I also enjoy going to the beach and watch
-              the sunset. I play acoustic guitar too, and though I&apos;m not a
-              good singer, I do try my best.
-            </p>
+            <motion.div variants={textEnterLeftVariants}>
+              <p>
+                {about.paragraph1}{" "}
+                <Link
+                  target="_blank"
+                  className="hover:text-gray-100 font-semibold"
+                  href={"https://www.ufpe.br/"}
+                >
+                  Federal University of Pernambuco
+                </Link>{" "}
+                in 2019.
+              </p>
+            </motion.div>
+
+            <motion.div variants={textEnterLeftVariants}>
+              <p className="mt-4">
+                {about.paragraph2}{" "}
+                <Link
+                  target="_blank"
+                  className="hover:text-gray-100 font-semibold"
+                  href={"https://arctouch.com/"}
+                >
+                  ArcTouch
+                </Link>{" "}
+                as a software engineer.
+              </p>
+            </motion.div>
+
+            <motion.div variants={textEnterLeftVariants}>
+              <p className="mt-4">{about.paragraph3}</p>
+            </motion.div>
+
+            <motion.div variants={textEnterLeftVariants}>
+              <p className="mt-4">{about.paragraph4}</p>
+            </motion.div>
           </div>
           <MeCard />
-        </motion.div>
+        </motion.section>
 
         {/*====== Tech stack ====== */}
         <motion.section

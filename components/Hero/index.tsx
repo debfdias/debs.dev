@@ -1,3 +1,5 @@
+import { home } from "@/constants/texts"
+import { textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { GiHand } from "react-icons/gi"
@@ -30,29 +32,30 @@ export default function Hero() {
       </div>
 
       <div className="text-gray-200 font-thin text-xl">
-        <motion.div
+        <motion.section
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.25, delayChildren: 0.5 },
+            },
+          }}
+          initial="hidden"
           whileInView="visible"
           exit="hidden"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          className="sm:py-8"
         >
-          <div className="sm:max-w-[750px] sm:min-w-[500px] sm:py-8">
-            <p>
-              I am a software engineer based in Recife, Brazil. I have
-              experience in building scalable, secure and accessible
-              applications using various frameworks and technologies. I am
-              passionate about creating high-quality code that follows best
-              practices and industry standards.
-            </p>
-            <p className="mt-4">
-              With more than 7 years of professional experience, I am committed
-              to delivering not just code but real world solutions that meet the
-              unique needs of clients and users. Let&apos;s connect and explore
-              how I can contribute to your next project!
-            </p>
-          </div>
-        </motion.div>
+          <motion.div
+            className="sm:max-w-[750px] sm:min-w-[500px]"
+            variants={textEnterLeftVariants}
+          >
+            <p>{home.description}</p>
+          </motion.div>
+          <motion.div
+            className="sm:max-w-[750px] sm:min-w-[500px]"
+            variants={textEnterLeftVariants}
+          >
+            <p className="mt-4">{home.headline}</p>
+          </motion.div>
+        </motion.section>
         <div className="py-12 sm:flex sm:gap-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}

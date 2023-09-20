@@ -1,3 +1,4 @@
+import { timeline } from "@/constants/texts"
 import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import { FaGraduationCap } from "react-icons/fa"
@@ -52,11 +53,7 @@ export default function Timeline() {
                   March, 2022
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  I participated in several projects for clients like HP and
-                  Disney while working at ArcTouch. I architected and
-                  implemented efficient solutions using Javascript and Ruby, and
-                  also mentored junior engineers, conducting code reviews, and
-                  implementing best practices to maintain code quality.
+                  {timeline.arctouch}
                 </p>
               </div>
             </div>
@@ -75,8 +72,7 @@ export default function Timeline() {
                   September, 2022
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  At Sama, I develop and maintain several features of a coaching
-                  platform.
+                  {timeline.sama}
                 </p>
               </div>
             </div>
@@ -95,9 +91,7 @@ export default function Timeline() {
                   November, 2019 - March, 2022
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  As a mid level developer, I was part of a them to develop a
-                  virtual reality environments and a 3D Unity content creator
-                  alongside with other universal windows platform applications.
+                  {timeline.samsung}
                 </p>
               </div>
             </div>
@@ -116,10 +110,7 @@ export default function Timeline() {
                   November, 2017 - February, 2022
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  As a tech lead, I was responsible for development of a mobile
-                  app and web platform aiming to raise public awareness of
-                  arbovirus diseases, like dengue fever, zika virus, yellow
-                  fever and so on.
+                  {timeline.oswaldoCruz}
                 </p>
               </div>
             </div>
@@ -138,9 +129,7 @@ export default function Timeline() {
                   January, 2019
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  After long years of study, I finally got my bachelor degree in
-                  Computer Engineering. My undergraduate thesis was about
-                  Quantum Computing and quantum algorithms.
+                  {timeline.bachelor}
                 </p>
               </div>
             </div>
@@ -159,10 +148,7 @@ export default function Timeline() {
                   November 2015, December 2018
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  That was my first professional experience! I was an intern and
-                  part of a team to develop distance education tools, such as a
-                  platform to write an undergraduate thesis with advisors
-                  support in a chosen area of study.
+                  {timeline.saber}
                 </p>
               </div>
             </div>

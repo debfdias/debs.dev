@@ -1,3 +1,4 @@
+import { home } from "@/constants/texts"
 import { textEnterLeftVariants } from "@/constants/variants"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -33,15 +34,14 @@ export default function LatestProjects() {
         </div>
         <motion.div variants={textEnterLeftVariants}>
           <div className="text-gray-200 font-thin sm:text-xl text-lg mt-16 md:w-full xl:w-2/3">
-            These are some of my recent projects I&apos;ve worked on. Feel free
-            to explore the{" "}
+            {home.latestProjectsLine1}{" "}
             <Link
               href="/projects"
               className="font-semibold text-gray-100 hover:text-pink-500"
             >
               Projects
             </Link>{" "}
-            page to get more details about it, as well my{" "}
+            {home.latestProjectsLine2}{" "}
             <Link
               target="_blank"
               href="https://github.com/debfdias"
@@ -49,7 +49,7 @@ export default function LatestProjects() {
             >
               Github
             </Link>{" "}
-            , to check the code itself, contribute or craft amazing experiences.
+            {home.latestProjectsLine3}
           </div>
         </motion.div>
 
