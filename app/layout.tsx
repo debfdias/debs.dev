@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import ThemeProvider from "@/contexts/ThemeProvider"
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import { Signika } from "next/font/google"
 import "./globals.css"
@@ -30,6 +31,7 @@ export default function RootLayout({
           </main>
         </div>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
