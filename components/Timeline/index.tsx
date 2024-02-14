@@ -69,7 +69,7 @@ export default function Timeline() {
                   Sama Europe{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  September, 2022
+                  September, 2022 - February, 2024
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
                   {timeline.sama}

@@ -76,7 +76,7 @@ export default function Hero() {
             <Link
               target="_blank"
               href={
-                "https://drive.google.com/file/d/168d6kiyzbqv6jg8any0J6V7A3HWydGNV/view?usp=sharing"
+                "https://drive.google.com/file/d/1__WEC2qDXqzfV7cA398OQ9FxUlk0qhGP/view?usp=sharing"
               }
             >
               <button className="bg-gradient-to-l from-pink-500 to-pink-700 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 mb-4 sm:mb-0 w-full sm:w-auto items-center justify-center">

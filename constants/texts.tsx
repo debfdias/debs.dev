@@ -30,7 +30,7 @@ export const about = {
 export const timeline = {
   arctouch:
     "I participated in several projects for clients like HP and Disney while working at ArcTouch. I architected and implemented efficient solutions using Javascript and Ruby, and also mentored junior engineers, conducting code reviews, and implementing best practices to maintain code quality.",
-  sama: "At Sama, I develop and maintain several features of a coaching platform.",
+  sama: "At Sama, I developed and maintained several features of a coaching platform. I was also responsible for adding AI into the matching process between mentors and mentees.",
   samsung:
     "As a mid level developer, I was part of a them to develop a virtual reality environments and a 3D Unity content creator alongside with other universal windows platform applications.",
   oswaldoCruz:
