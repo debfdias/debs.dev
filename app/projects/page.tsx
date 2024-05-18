@@ -9,7 +9,7 @@ export default function Projects() {
         >
           github
         </a>{" "}
-        to see what I'm coding!
+        to see what I&apos;m coding!
       </p>
     </div>
   );
