@@ -1,8 +1,8 @@
-import { timeline } from "@/constants/texts"
-import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
-import { motion } from "framer-motion"
-import { FaGraduationCap } from "react-icons/fa"
-import { MdWork } from "react-icons/md"
+import { timeline } from "@/constants/texts";
+import { stackVariants, textEnterLeftVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
 
 export default function Timeline() {
   return (
@@ -44,13 +44,32 @@ export default function Timeline() {
                   <MdWork />
                 </span>
                 <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
-                  ArcTouch{" "}
+                  Solo60{" "}
                   <span className="bg-pink-500 text-gray-100 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
                     Current
                   </span>
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  March, 2022
+                  February, 2024
+                </time>
+                <p className="mb-4 text-lg font-thin text-gray-200">
+                  {timeline.arctouch}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div variants={stackVariants}>
+            <div className="relative border-l border-gray-700 pb-2">
+              <div className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
+                  <MdWork />
+                </span>
+                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                  ArcTouch{" "}
+                </h3>
+                <time className="block mb-2 text-md font-thin text-gray-300">
+                  March, 2022 - May, 2024
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
                   {timeline.arctouch}
@@ -156,5 +175,5 @@ export default function Timeline() {
         </ol>
       </motion.section>
     </div>
-  )
+  );
 }

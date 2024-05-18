@@ -1,21 +1,21 @@
-import { home } from "@/constants/texts"
-import { textEnterLeftVariants } from "@/constants/variants"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import { GiHand } from "react-icons/gi"
-import { GrDocumentPdf } from "react-icons/gr"
-import AnimatedByWord from "../AnimatedByWord"
+import { home } from "@/constants/texts";
+import { textEnterLeftVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { GiHand } from "react-icons/gi";
+import { GrDocumentPdf } from "react-icons/gr";
+import AnimatedByWord from "../AnimatedByWord";
 
 export default function Hero() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault()
-    const href = e.currentTarget.href
-    const targetId = href.replace(/.*\#/, "")
-    const elem = document.getElementById(targetId)
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
     elem?.scrollIntoView({
       behavior: "smooth",
-    })
-  }
+    });
+  };
 
   return (
     <div className="sm:w-2/3 sm:mr-0 mr-12 sm:py-12">
@@ -76,7 +76,7 @@ export default function Hero() {
             <Link
               target="_blank"
               href={
-                "https://drive.google.com/file/d/1__WEC2qDXqzfV7cA398OQ9FxUlk0qhGP/view?usp=sharing"
+                "https://drive.google.com/file/d/1Dsc9sor2RU3cWxSwAmoEnj_4Dwpjs1J8/view?usp=sharing"
               }
             >
               <button className="bg-gradient-to-l from-pink-500 to-pink-700 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 mb-4 sm:mb-0 w-full sm:w-auto items-center justify-center">
@@ -115,5 +115,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }
