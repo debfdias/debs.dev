@@ -53,7 +53,7 @@ export default function Timeline() {
                   February, 2024
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.arctouch}
+                  {timeline.solo60}
                 </p>
               </div>
             </div>
