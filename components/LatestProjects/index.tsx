@@ -1,8 +1,8 @@
-import { home } from "@/constants/texts"
-import { textEnterLeftVariants } from "@/constants/variants"
-import { motion } from "framer-motion"
-import Link from "next/link"
-import ProjectsSlider from "../ProjectsSlider"
+import { home } from "@/constants/texts";
+import { textEnterLeftVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import ProjectsSlider from "../ProjectsSlider";
 
 export default function LatestProjects() {
   return (
@@ -17,8 +17,8 @@ export default function LatestProjects() {
       <div className="z-0 pr-4">
         <div className="pt-12 sm:pt-24 flex items-center font-thin pr-12 sm:pr-0">
           <motion.div variants={textEnterLeftVariants}>
-            <h2 className="text-gray-200 text-xl sm:text-xl whitespace-nowrap">
-              Lastest projects
+            <h2 className="dark:text-gray-200 text-gray-600 text-xl sm:text-xl whitespace-nowrap">
+              Latest projects
             </h2>
           </motion.div>
 
@@ -33,11 +33,11 @@ export default function LatestProjects() {
           </div>
         </div>
         <motion.div variants={textEnterLeftVariants}>
-          <div className="text-gray-200 font-thin sm:text-xl text-lg mt-16 md:w-full xl:w-2/3">
+          <div className="dark:text-gray-200 text-gray-600 font-thin sm:text-xl text-lg mt-16 md:w-full xl:w-2/3">
             {home.latestProjectsLine1}{" "}
             <Link
               href="/projects"
-              className="font-semibold text-gray-100 hover:text-pink-500"
+              className="font-semibold dark:text-gray-100 text-pink-500 hover:text-pink-300"
             >
               Projects
             </Link>{" "}
@@ -45,7 +45,7 @@ export default function LatestProjects() {
             <Link
               target="_blank"
               href="https://github.com/debfdias"
-              className="font-semibold text-gray-100 hover:text-pink-500"
+              className="font-semibold dark:text-gray-100 text-pink-500 hover:text-pink-300"
             >
               Github
             </Link>{" "}
@@ -56,5 +56,5 @@ export default function LatestProjects() {
         <ProjectsSlider />
       </div>
     </motion.section>
-  )
+  );
 }

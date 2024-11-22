@@ -26,7 +26,7 @@ export default function TechStack() {
       exit="hidden"
       viewport={{ once: true, amount: 0.8 }}
     >
-      <div className="sm:flex pt-8 items-center text-gray-200">
+      <div className="sm:flex pt-8 items-center dark:text-gray-200 text-gray-400">
         <motion.div variants={textEnterLeftVariants}>
           <div className="font-semibold mr-4 whitespace-nowrap sm:pb-0 pb-4 text-lg">
             Things I code with:

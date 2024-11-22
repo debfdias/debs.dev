@@ -1,9 +1,9 @@
-import { mobileLinkVariants, mobileNavVariants } from "@/constants/variants"
-import { AnimatePresence, motion } from "framer-motion"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useRef, useState } from "react"
-import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
+import { mobileLinkVariants, mobileNavVariants } from "@/constants/variants";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
 
 const navItems = [
   {
@@ -18,21 +18,21 @@ const navItems = [
     path: "/projects",
     name: "Projects",
   },
-]
+];
 
-const MotionLink = motion(Link)
+const MotionLink = motion(Link);
 
 export function Navbar() {
-  const navRef = useRef<HTMLElement>(null)
+  const navRef = useRef<HTMLElement>(null);
 
-  const [isOpen, setIsOpen] = useState(false)
-  let pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
+  let pathname = usePathname();
 
   if (pathname.includes("/projects/")) {
-    pathname = "/projects"
+    pathname = "/projects";
   }
 
-  const [hoveredPath, setHoveredPath] = useState(pathname)
+  const [hoveredPath, setHoveredPath] = useState(pathname);
 
   return (
     <div>
@@ -44,12 +44,14 @@ export function Navbar() {
         <nav className="hidden sm:block">
           <div className="flex gap-4">
             {navItems.map((item) => {
-              const isActive = item.path === pathname
+              const isActive = item.path === pathname;
               return (
                 <Link
                   key={item.path}
-                  className={`px-4 pb-4 text-lg font-semibold relative no-underline duration-300 ease-in hover:text-gray-200 ${
-                    isActive ? "text-gray-100" : "text-gray-300"
+                  className={`px-4 pb-4 text-lg font-semibold relative no-underline duration-300 ease-in dark:hover:text-gray-200 hover:text-pink-300 ${
+                    isActive
+                      ? "dark:text-gray-100 text-pink-500"
+                      : "text-gray-300"
                   }`}
                   data-active={isActive}
                   href={item.path}
@@ -93,7 +95,7 @@ export function Navbar() {
                     />
                   )}
                 </Link>
-              )
+              );
             })}
           </div>
         </nav>
@@ -124,7 +126,7 @@ export function Navbar() {
                 <RxCross1 size={24} aria-hidden="true" />
               </button>
               {navItems.map((route) => {
-                const isActive = route.path === pathname
+                const isActive = route.path === pathname;
                 return (
                   <div
                     key={route.name}
@@ -147,12 +149,12 @@ export function Navbar() {
                       </div>
                     </MotionLink>
                   </div>
-                )
+                );
               })}
             </motion.nav>
           </div>
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

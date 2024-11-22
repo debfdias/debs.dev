@@ -6,7 +6,7 @@ import { MdWork } from "react-icons/md";
 
 export default function Timeline() {
   return (
-    <div className="text-gray-200 md:mr-8">
+    <div className="dark:text-gray-200 text-gray-500 md:mr-8">
       <motion.section
         initial="hidden"
         whileInView="visible"
@@ -38,21 +38,21 @@ export default function Timeline() {
       >
         <ol>
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 pb-2">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 pb-2">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Cheesecake Labs{" "}
-                  <span className="bg-pink-500 text-gray-100 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
+                  <span className="bg-pink-500 text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
                     Current
                   </span>
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.cheesecake.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.cheesecake.description}
                 </p>
               </div>
@@ -60,18 +60,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 pb-2">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 pb-2">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Alteam{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.alteam.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.alteam.description}
                 </p>
               </div>
@@ -79,18 +79,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 pb-2">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 pb-2">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Solo60{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.solo60.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.solo60.description}
                 </p>
               </div>
@@ -98,18 +98,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 pb-2">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 pb-2">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   ArcTouch{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.arctouch.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.arctouch.description}
                 </p>
               </div>
@@ -117,18 +117,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 py-2 -mt-6">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 py-2 -mt-6">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Sama Europe{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.sama.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.sama.description}
                 </p>
               </div>
@@ -136,18 +136,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 py-2 -mt-6">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 py-2 -mt-6">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Samsung Project{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.samsung.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.samsung.description}
                 </p>
               </div>
@@ -155,18 +155,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 py-2 -mt-6">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 py-2 -mt-6">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Oswaldo Cruz Foundation{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   {timeline.oswaldoCruz.time}
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.oswaldoCruz.description}
                 </p>
               </div>
@@ -174,18 +174,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 py-2 -mt-6">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 py-2 -mt-6">
               <div className="mb-10 ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <FaGraduationCap />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Computer Engineering bachelor degree{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   January, 2019
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.bachelor}
                 </p>
               </div>
@@ -193,18 +193,18 @@ export default function Timeline() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="relative border-l border-gray-700 pt-2 -mt-6">
+            <div className="relative border-l dark:border-gray-700 border-gray-200 pt-2 -mt-6">
               <div className="ml-6">
                 <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
                   <MdWork />
                 </span>
-                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                <h3 className="flex items-center mb-1 text-xl font-semibold dark:text-gray-100 text-gray-300">
                   Saber Social Technologies{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
                   November 2015, December 2018
                 </time>
-                <p className="mb-4 text-lg font-thin text-gray-200">
+                <p className="mb-4 text-lg font-thin dark:text-gray-200 text-gray-500">
                   {timeline.saber}
                 </p>
               </div>

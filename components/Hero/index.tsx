@@ -2,8 +2,8 @@ import { home } from "@/constants/texts";
 import { textEnterLeftVariants } from "@/constants/variants";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { BiSolidFilePdf } from "react-icons/bi";
 import { GiHand } from "react-icons/gi";
-import { GrDocumentPdf } from "react-icons/gr";
 import AnimatedByWord from "../AnimatedByWord";
 
 export default function Hero() {
@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="flex mb-3">
         <AnimatedByWord
           text="Hey there, I am"
-          style="text-gray-100 md:text-6xl mb-8 text-5xl font-semibold mr-2"
+          style="text-gray-500 dark:text-gray-100 md:text-6xl mb-8 text-5xl font-semibold mr-2"
         />
         <AnimatedByWord
           delay={0.85}
@@ -48,13 +48,17 @@ export default function Hero() {
             className="sm:max-w-[750px] sm:min-w-[500px]"
             variants={textEnterLeftVariants}
           >
-            <p>{home.description}</p>
+            <p className="text-gray-500 dark:text-gray-200">
+              {home.description}
+            </p>
           </motion.div>
           <motion.div
             className="sm:max-w-[750px] sm:min-w-[500px]"
             variants={textEnterLeftVariants}
           >
-            <p className="mt-4">{home.headline}</p>
+            <p className="text-gray-500 dark:text-gray-200 mt-4">
+              {home.headline}
+            </p>
           </motion.div>
         </motion.section>
         <div className="py-12 sm:flex sm:gap-8">
@@ -79,9 +83,9 @@ export default function Hero() {
                 "https://drive.google.com/file/d/1N4qhWhSoOxy6Iza_K7T9MgL0bHrZyLHbWv3VBqN2Z1A/view?usp=sharing"
               }
             >
-              <button className="bg-gradient-to-l from-pink-500 to-pink-700 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 mb-4 sm:mb-0 w-full sm:w-auto items-center justify-center">
-                <GrDocumentPdf size={20} />
-                <div className="text-blue-700 font-semibold whitespace-nowrap">
+              <button className="bg-gradient-to-l from-pink-500 to-pink-700 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 mb-4 sm:mb-0 w-full sm:w-auto items-center justify-center text-white dark:text-blue-700 ">
+                <BiSolidFilePdf size={25} />
+                <div className="font-semibold whitespace-nowrap">
                   Download resume
                 </div>
               </button>
@@ -104,7 +108,7 @@ export default function Hero() {
             }}
           >
             <Link href="#getInTouch" onClick={handleScroll}>
-              <button className="bg-gray-100 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 text-blue-700 w-full sm:w-auto items-center justify-center">
+              <button className="bg-blue-500 dark:bg-gray-100 rounded-md py-3 px-6 flex gap-4 hover:brightness-90 hover:scale-[1.05] hover:-translate-y-1 transition ease-in-out delay-150 dark:text-blue-700 text-white w-full sm:w-auto items-center justify-center">
                 <GiHand size={20} />
                 <div className="font-semibold whitespace-nowrap">
                   Let&apos;s talk!

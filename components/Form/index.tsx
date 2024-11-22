@@ -77,7 +77,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit(handleSendMessage)}
         >
           <motion.div variants={dropUpVariants}>
-            <label className="font-thin text-sm text-gray-300 mb-2 flex">
+            <label className="font-thin text-sm dark:text-gray-300 text-gray-500 mb-2 flex">
               Name
             </label>
             <InputText
@@ -90,7 +90,7 @@ export default function ContactForm() {
           </motion.div>
 
           <motion.div variants={dropUpVariants}>
-            <label className="font-thin text-sm text-gray-300 mb-2 flex">
+            <label className="font-thin text-sm dark:text-gray-300 text-gray-500 mb-2 flex">
               E-mail
             </label>
             <InputText
@@ -103,14 +103,14 @@ export default function ContactForm() {
           </motion.div>
 
           <motion.div variants={dropUpVariants}>
-            <label className="font-thin text-sm text-gray-300 mb-2 flex">
+            <label className="font-thin text-sm dark:text-gray-300 text-gray-500 mb-2 flex">
               Message
             </label>
             <textarea
               {...register("message")}
               name="message"
               id="message"
-              className="bg-blue-500 p-2 rounded-md text-gray-300 w-full mb-3 font-thin focus:outline-none focus:ring-1 focus:ring-pink-500 resize-none h-[120px]"
+              className="dark:bg-blue-500 bg-gray-100 p-2 rounded-md dark:text-gray-300 text-gray-500 w-full mb-3 font-thin focus:outline-none focus:ring-1 focus:ring-pink-500 resize-none h-[120px]"
               placeholder="Your awesome message"
             ></textarea>
           </motion.div>
@@ -134,7 +134,7 @@ export default function ContactForm() {
               <motion.div variants={arrowAnimation}>
                 <LuSend size={24} />
               </motion.div>
-              <div className="font-semibold whitespace-nowrap text-lg">
+              <div className="dark:text-gray-200 text-gray-400 font-semibold whitespace-nowrap text-lg hover:text-pink-500">
                 {isSubmitting ? <>Sending...</> : <>Send it</>}
               </div>
             </div>

@@ -1,12 +1,12 @@
-"use client"
-import AnimatedByWord from "@/components/AnimatedByWord"
-import MeCard from "@/components/MeCard"
-import TechStack from "@/components/TechStack"
-import Timeline from "@/components/Timeline"
-import { about } from "@/constants/texts"
-import { textEnterLeftVariants } from "@/constants/variants"
-import { motion } from "framer-motion"
-import Link from "next/link"
+"use client";
+import AnimatedByWord from "@/components/AnimatedByWord";
+import MeCard from "@/components/MeCard";
+import TechStack from "@/components/TechStack";
+import Timeline from "@/components/Timeline";
+import { about } from "@/constants/texts";
+import { textEnterLeftVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -14,7 +14,7 @@ export default function About() {
       <div className="md:pr-0 pr-12">
         <AnimatedByWord
           text="A bit about me..."
-          style="text-gray-200 md:text-5xl mb-8 text-4xl font-semibold mr-2"
+          style="dark:text-gray-200 text-gray-500 md:text-5xl mb-8 text-4xl font-semibold mr-2"
         />
 
         {/*====== Description ====== */}
@@ -30,13 +30,13 @@ export default function About() {
           className="xl:flex items-center grid"
           viewport={{ once: true, amount: 0.1 }}
         >
-          <div className="md:pr-12 sm:py-8 font-thin text-xl text-gray-200 sm:w-full">
+          <div className="md:pr-12 sm:py-8 font-thin text-xl dark:text-gray-200 text-gray-500  sm:w-full">
             <motion.div variants={textEnterLeftVariants}>
               <p>
                 {about.paragraph1}{" "}
                 <Link
                   target="_blank"
-                  className="hover:text-gray-100 font-semibold"
+                  className="dark:hover:text-gray-100 hover:text-gray-400 font-semibold"
                   href={"https://www.ufpe.br/"}
                 >
                   Federal University of Pernambuco
@@ -50,10 +50,10 @@ export default function About() {
                 {about.paragraph2}{" "}
                 <Link
                   target="_blank"
-                  className="hover:text-gray-100 font-semibold"
-                  href={"https://arctouch.com/"}
+                  className="dark:text-gray-200 text-gray-500 font-semibold dark:hover:text-gray-100 hover:text-gray-400 "
+                  href={"https://cheesecakelabs.com/"}
                 >
-                  ArcTouch
+                  Cheesecake Labs
                 </Link>{" "}
                 as a software engineer.
               </p>
@@ -77,5 +77,5 @@ export default function About() {
         <Timeline />
       </div>
     </div>
-  )
+  );
 }
