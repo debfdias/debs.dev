@@ -20,16 +20,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={font.className}>
+    <html data-theme="dark" lang="en" className={font.className}>
       <body>
         <ThemeProvider>
-          <Header />
-          <div className="flex min-h-screen">
-            <main className="w-full pt-24 lg:px-44 pl-12 items-start">
-              {children}
-            </main>
+          <div className="dark:bg-blue-700 bg-white">
+            <Header />
+            <div className="flex min-h-screen">
+              <main className="w-full pt-24 lg:px-44 pl-12 items-start">
+                {children}
+              </main>
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </ThemeProvider>
         <Analytics />
       </body>
