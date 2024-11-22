@@ -1,16 +1,17 @@
-"use client"
+"use client";
 
 import {
   arrowAnimation,
   containerVariants,
   dropUpVariants,
-} from "@/constants/variants"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { motion } from "framer-motion"
-import { useForm } from "react-hook-form"
-import { LuSend } from "react-icons/lu"
-import z from "zod"
-import InputText from "../Input"
+} from "@/constants/variants";
+import emailjs from "@emailjs/browser";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { LuSend } from "react-icons/lu";
+import z from "zod";
+import InputText from "../Input";
 
 const formSchema = z.object({
   name: z
@@ -25,9 +26,9 @@ const formSchema = z.object({
       required_error: "Fill this field.",
     })
     .min(10, { message: "Fill this field." }),
-})
+});
 
-type FormData = z.infer<typeof formSchema>
+type FormData = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
   const {
@@ -37,11 +38,29 @@ export default function ContactForm() {
     formState: { errors, isSubmitSuccessful, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
-  })
+  });
 
-  async function handleSendMessage(data: any) {
-    console.log(data)
-    reset()
+  async function handleSendMessage(data: FormData) {
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    try {
+      await emailjs.send(
+        serviceID!,
+        templateID!,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+        },
+        userID!
+      );
+      alert("Message sent successfully!");
+      reset();
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      alert("Failed to send the message. Please try again.");
+    }
   }
 
   return (
@@ -123,5 +142,5 @@ export default function ContactForm() {
         </form>
       </div>
     </motion.div>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-import { stackVariants, textEnterLeftVariants } from "@/constants/variants"
-import { motion } from "framer-motion"
+import { stackVariants, textEnterLeftVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
 
-import { BiLogoNodejs, BiLogoReact } from "react-icons/bi"
+import { BiLogoNodejs, BiLogoReact } from "react-icons/bi";
 import {
   SiDocker,
   SiGraphql,
-  SiJavascript,
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
+  SiPython,
   SiTailwindcss,
   SiTypescript,
-} from "react-icons/si"
+} from "react-icons/si";
 
 export default function TechStack() {
   return (
@@ -41,8 +41,8 @@ export default function TechStack() {
           </motion.div>
 
           <motion.div variants={stackVariants}>
-            <div className="hover:text-yellow-400">
-              <SiJavascript size={24} />
+            <div className="hover:text-yellow-300">
+              <SiPython size={24} />
             </div>
           </motion.div>
 
@@ -96,5 +96,5 @@ export default function TechStack() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

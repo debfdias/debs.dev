@@ -44,16 +44,54 @@ export default function Timeline() {
                   <MdWork />
                 </span>
                 <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
-                  Solo60{" "}
+                  Cheesecake Labs{" "}
                   <span className="bg-pink-500 text-gray-100 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">
                     Current
                   </span>
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  February, 2024
+                  {timeline.cheesecake.time}
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.solo60}
+                  {timeline.cheesecake.description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div variants={stackVariants}>
+            <div className="relative border-l border-gray-700 pb-2">
+              <div className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
+                  <MdWork />
+                </span>
+                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                  Alteam{" "}
+                </h3>
+                <time className="block mb-2 text-md font-thin text-gray-300">
+                  {timeline.alteam.time}
+                </time>
+                <p className="mb-4 text-lg font-thin text-gray-200">
+                  {timeline.alteam.description}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div variants={stackVariants}>
+            <div className="relative border-l border-gray-700 pb-2">
+              <div className="mb-10 ml-6">
+                <span className="absolute flex items-center justify-center w-6 h-6 bg-pink-200 rounded-full -left-3 text-pink-500">
+                  <MdWork />
+                </span>
+                <h3 className="flex items-center mb-1 text-xl font-semibold text-gray-100">
+                  Solo60{" "}
+                </h3>
+                <time className="block mb-2 text-md font-thin text-gray-300">
+                  {timeline.solo60.time}
+                </time>
+                <p className="mb-4 text-lg font-thin text-gray-200">
+                  {timeline.solo60.description}
                 </p>
               </div>
             </div>
@@ -69,10 +107,10 @@ export default function Timeline() {
                   ArcTouch{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  March, 2022 - May, 2024
+                  {timeline.arctouch.time}
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.arctouch}
+                  {timeline.arctouch.description}
                 </p>
               </div>
             </div>
@@ -88,10 +126,10 @@ export default function Timeline() {
                   Sama Europe{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  September, 2022 - February, 2024
+                  {timeline.sama.time}
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.sama}
+                  {timeline.sama.description}
                 </p>
               </div>
             </div>
@@ -107,10 +145,10 @@ export default function Timeline() {
                   Samsung Project{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  November, 2019 - March, 2022
+                  {timeline.samsung.time}
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.samsung}
+                  {timeline.samsung.description}
                 </p>
               </div>
             </div>
@@ -126,10 +164,10 @@ export default function Timeline() {
                   Oswaldo Cruz Foundation{" "}
                 </h3>
                 <time className="block mb-2 text-md font-thin text-gray-300">
-                  November, 2017 - February, 2022
+                  {timeline.oswaldoCruz.time}
                 </time>
                 <p className="mb-4 text-lg font-thin text-gray-200">
-                  {timeline.oswaldoCruz}
+                  {timeline.oswaldoCruz.description}
                 </p>
               </div>
             </div>

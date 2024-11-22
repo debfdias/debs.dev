@@ -28,15 +28,41 @@ export const about = {
 };
 
 export const timeline = {
-  solo60:
-    "As a Tech Lead, I'm responsbile for the development and migration of the new API of a gym platform with more then 10.000 users. Collaborating closely with product managers and designers, I translated business requirements into technical specifications, ensuring the API's scalability, security, and efficiency.",
-  arctouch:
-    "I participated in several projects for clients like HP and Disney while working at ArcTouch. I architected and implemented efficient solutions using Javascript and Ruby, and also mentored junior engineers, conducting code reviews, and implementing best practices to maintain code quality.",
-  sama: "At Sama, I developed and maintained several features of a coaching platform. I was also responsible for adding AI into the matching process between mentors and mentees.",
-  samsung:
-    "As a mid level developer, I was part of a them to develop a virtual reality environments and a 3D Unity content creator alongside with other universal windows platform applications.",
-  oswaldoCruz:
-    "As a tech lead, I was responsible for development of a mobile app and web platform aiming to raise public awareness of arbovirus diseases, like dengue fever, zika virus, yellow fever and so on.",
+  cheesecake: {
+    description:
+      "Working as a mobile developer, I'm developing a hybrid version of an app that allows users to effortlessly build, manage, and optimize mobile shopping apps and stores.",
+    time: "July, 2024 ",
+  },
+  solo60: {
+    description:
+      "As a Tech Lead, I was responsible for the development and migration of the new API of a gym platform with more then 10.000 users. Collaborating closely with product managers and designers, I translated business requirements into technical specifications, ensuring the API's scalability, security, and efficiency.",
+    time: "February, 2024 - August, 2024",
+  },
+  alteam: {
+    description:
+      "I developed and fine-tuned a custom Large LLM to match candidates with open roles, leveraging OpenAI's lib. This model included a pricing prediction to estimate position costs based on seniority, expertise and other attributes.",
+    time: "July, 2024 - November, 2024",
+  },
+  arctouch: {
+    description:
+      "I participated in several projects for clients like HP and Disney while working at ArcTouch. I architected and implemented efficient solutions using Javascript and Ruby, and also mentored junior engineers, conducting code reviews, and implementing best practices to maintain code quality.",
+    time: "March, 2022 - May, 2024",
+  },
+  sama: {
+    description:
+      "At Sama, I developed and maintained several features of a coaching platform. I was also responsible for adding AI into the matching process between mentors and mentees.",
+    time: "September, 2022 - February, 2024",
+  },
+  samsung: {
+    description:
+      "As a mid level developer, I was part of a them to develop a virtual reality environments and a 3D Unity content creator alongside with other universal windows platform applications.",
+    time: "November, 2019 - March, 2022",
+  },
+  oswaldoCruz: {
+    description:
+      "As a tech lead, I was responsible for development of a mobile app and web platform aiming to raise public awareness of arbovirus diseases, like dengue fever, zika virus, yellow fever and so on.",
+    time: "November, 2017 - February, 2022",
+  },
   bachelor:
     "After long years of study, I finally got my bachelor degree in Computer Engineering. My undergraduate thesis was about Quantum Computing and quantum algorithms.",
   saber:
